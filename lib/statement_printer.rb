@@ -1,7 +1,7 @@
-require_relative 'account'
+# Prints statements to console.
+require_relative 'transaction_log'
 
 class PrintStatement
-
   attr_reader :transactions
 
   def initialize(transactions)
@@ -9,7 +9,9 @@ class PrintStatement
   end
 
   def print_statement
-    transactions.each { |tr| puts tr }
+    puts 'date || credit || debit || balance'
+    transactions.reverse.each do |transaction|
+      puts transaction.join(' || ')
+    end
   end
-
 end

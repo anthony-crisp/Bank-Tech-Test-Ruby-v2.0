@@ -1,6 +1,6 @@
 require 'transaction_log'
 
-RSpec.describe TrancactionLog do
+RSpec.describe TransactionLog do
   subject(:TrancactionLog) { described_class.new }
 
   it 'initializes with with no transactions' do
