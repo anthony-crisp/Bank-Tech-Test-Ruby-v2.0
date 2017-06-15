@@ -8,7 +8,7 @@ require 'account'
 
 RSpec.describe Account do
   subject(:account) { described_class.new }
-  it 'reproduces the statement as shown if given coresonding inputs' do
+  it 'reproduces the statement as shown if given corresponding inputs' do
     subject.deposit(1000, '10/01/2012')
     subject.deposit(2000, '13/01/2012')
     subject.withdraw(500, '14/01/2012')
