@@ -7,11 +7,11 @@ class Balance
     @current_balance = 0
   end
 
-  def money_in(ammount, date = DateGenerator.new.date)
+  def money_in(ammount, _date = DateGenerator.new.date)
     @current_balance += ammount
   end
 
-  def money_out(ammount, date = DateGenerator.new.date)
+  def money_out(ammount, _date = DateGenerator.new.date)
     raise 'Insuficient funds in account.' if @current_balance <= 0
     @current_balance -= ammount
   end

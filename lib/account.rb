@@ -4,7 +4,7 @@ require_relative 'date_generator'
 require_relative 'statement_printer'
 
 class Account
-attr_reader :balance
+  attr_reader :balance
 
   def initialize
     @balance = Balance.new
@@ -28,11 +28,10 @@ attr_reader :balance
   private
 
   def log_deposit(amount, date)
-    @transactions << [date, '%.2f' % amount, '', '%.2f' % @balance.current_balance]
+    @transactions << [date, format('%.2f', amount), '', format('%.2f', @balance.current_balance)]
   end
 
   def log_withdraw(amount, date)
-    @transactions << [date, '', '%.2f' % amount, '%.2f' % @balance.current_balance]
+    @transactions << [date, '', format('%.2f', amount), format('%.2f', @balance.current_balance)]
   end
-
 end
