@@ -8,30 +8,21 @@ class Account
 
   def initialize
     @balance = Balance.new
-    @transactions = TransactionLog.new.transactions
+    @transactions = TransactionLog.new
   end
 
-  def deposit(amount, date = DateGenerator.new.date)
+  def deposit(amount, date = DateGenerator.todays_date)
     @balance.money_in(amount)
-    log_deposit(amount, date)
+    @transactions.log_deposit(amount, date, @balance.current_balance)
   end
 
-  def withdraw(amount, date = DateGenerator.new.date)
+  def withdraw(amount, date = DateGenerator.todays_date)
     @balance.money_out(amount)
-    log_withdraw(amount, date)
+    @transactions.log_withdraw(amount, date, @balance.current_balance)
   end
 
   def print_statement
-    PrintStatement.new(@transactions).print_statement
+    PrintStatement.new(@transactions.log).print_statement
   end
 
-  private
-
-  def log_deposit(amount, date)
-    @transactions << [date, format('%.2f', amount), '', format('%.2f', @balance.current_balance)]
-  end
-
-  def log_withdraw(amount, date)
-    @transactions << [date, '', format('%.2f', amount), format('%.2f', @balance.current_balance)]
-  end
 end

@@ -71,15 +71,6 @@
         1,
         null,
         null,
-        1,
-        null,
-        1,
-        7,
-        null,
-        null,
-        1,
-        4,
-        null,
         null
       ],
       "/Users/anthonycrisp/Desktop/Projects/bank_tech_test_v2/lib/balance.rb": [
@@ -106,9 +97,18 @@
         null,
         1,
         1,
+        1,
         null,
         1,
         8,
+        null,
+        null,
+        1,
+        7,
+        null,
+        null,
+        1,
+        4,
         null,
         null
       ],
@@ -117,14 +117,10 @@
         1,
         null,
         1,
-        1,
         null,
         1,
         11,
         null,
-        null,
-        1,
-        12,
         null,
         null
       ],
@@ -160,6 +156,9 @@
       ],
       "/Users/anthonycrisp/Desktop/Projects/bank_tech_test_v2/spec/feature/account_feature_spec.rb": [
         1,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -216,6 +215,6 @@
         null
       ]
     },
-    "timestamp": 1497604884
+    "timestamp": 1497614197
   }
 }

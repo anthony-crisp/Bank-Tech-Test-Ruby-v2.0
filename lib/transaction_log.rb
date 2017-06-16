@@ -1,8 +1,17 @@
 # Logs all transactions to be passed to the printer.
+require_relative 'balance'
 class TransactionLog
-  attr_accessor :transactions
+  attr_accessor :log
 
   def initialize
-    @transactions = []
+    @log = []
+  end
+
+  def log_deposit(amount, date, balance)
+    @log << [date, format('%.2f', amount), '', format('%.2f', balance)]
+  end
+
+  def log_withdraw(amount, date, balance)
+    @log << [date, '', format('%.2f', amount), format('%.2f', balance)]
   end
 end

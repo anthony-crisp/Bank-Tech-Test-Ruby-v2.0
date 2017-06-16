@@ -7,12 +7,12 @@ class Balance
     @current_balance = 0
   end
 
-  def money_in(ammount)
-    @current_balance += ammount
+  def money_in(amount)
+    @current_balance += amount
   end
 
-  def money_out(ammount)
+  def money_out(amount)
     raise 'Insuficient funds in account.' if @current_balance <= 0
-    @current_balance -= ammount
+    @current_balance -= amount
   end
 end

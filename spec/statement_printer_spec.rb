@@ -9,7 +9,7 @@ RSpec.describe PrintStatement do
   end
 
   it 'prints formatted statement to stdout' do
-    date = DateGenerator.new.date
+    date = DateGenerator.todays_date
     @transaction = [[date, 20, '', 20], [date, 10, '', 30]]
     expect { PrintStatement.new(@transaction).print_statement }.to output(
       "date || credit || debit || balance\n" \
