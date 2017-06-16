@@ -1,7 +1,7 @@
 # Keeps track of the balance as money comes in and out.
 
 class Balance
-  attr_reader :current_balance, :transactions
+  attr_reader :current_balance
 
   def initialize
     @current_balance = 0
