@@ -70,7 +70,6 @@
         1,
         1,
         null,
-        null,
         null
       ],
       "/Users/anthonycrisp/Desktop/Projects/bank_tech_test_v2/lib/balance.rb": [
@@ -117,10 +116,8 @@
         1,
         null,
         1,
-        null,
         1,
         11,
-        null,
         null,
         null
       ],
@@ -215,6 +212,6 @@
         null
       ]
     },
-    "timestamp": 1497614197
+    "timestamp": 1497648948
   }
 }

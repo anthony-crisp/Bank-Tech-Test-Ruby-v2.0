@@ -11,7 +11,7 @@ class PrintStatement
   def print_statement
     puts 'date || credit || debit || balance'
     transactions.reverse.each do |transaction|
-      puts transaction.join(' || ')
+      puts transaction.join(' || ').gsub!("  ", " ")
     end
   end
 end

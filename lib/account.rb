@@ -24,5 +24,4 @@ class Account
   def print_statement
     PrintStatement.new(@transactions.log).print_statement
   end
-
 end
