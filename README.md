@@ -33,20 +33,20 @@ The program allows you to manually enter a date for each transaction.
 => true
 [2] pry(main)> my_account = Account.new
 => #<Account:0x007fd709353300 @balance=#<Balance:0x007fd7093531e8 @current_balance=0>, @transactions=[]>
-[3] pry(main)> my_account.withdraw(500, '14/01/2012')
+[3] pry(main)> my_account.withdraw(500, '14-01-2012')
 RuntimeError: Insuficient funds in account.
 from /Users/anthonycrisp/Desktop/Projects/bank_tech_test_v2/lib/balance.rb:15:in `money_out'
-[4] pry(main)> my_account.deposit(1000, '10/01/2012')
+[4] pry(main)> my_account.deposit(1000, '10-01-2012')
 => [["10/01/2012", "1000.00", "", "1000.00"]]
-[5] pry(main)> my_account.deposit(2000, '13/01/2012')
+[5] pry(main)> my_account.deposit(2000, '13-01-2012')
 => [["10/01/2012", "1000.00", "", "1000.00"], ["13/01/2012", "2000.00", "", "3000.00"]]
 [6] pry(main)> my_account.withdraw(500, '14/01/2012')
 => [["10/01/2012", "1000.00", "", "1000.00"], ["13/01/2012", "2000.00", "", "3000.00"], ["14/01/2012", "", "500.00", "2500.00"]]
 [7] pry(main)> my_account.print_statement
 date || credit || debit || balance
-14/01/2012 ||  || 500.00 || 2500.00
-13/01/2012 || 2000.00 ||  || 3000.00
-10/01/2012 || 1000.00 ||  || 1000.00
+14/01/2012 || || 500.00 || 2500.00
+13/01/2012 || 2000.00 || || 3000.00
+10/01/2012 || 1000.00 || || 1000.00
 => [["14/01/2012", "", "500.00", "2500.00"], ["13/01/2012", "2000.00", "", "3000.00"], ["10/01/2012", "1000.00", "", "1000.00"]]
 
 ```
@@ -68,9 +68,9 @@ from /Users/anthonycrisp/Desktop/Projects/bank_tech_test_v2/lib/balance.rb:15:in
 => [["15/06/2017", "1000.00", "", "1000.00"], ["15/06/2017", "1000.00", "", "2000.00"], ["15/06/2017", "", "500.00", "1500.00"]]
 [7] pry(main)> my_account.print_statement
 date || credit || debit || balance
-15/06/2017 ||  || 500.00 || 1500.00
-15/06/2017 || 1000.00 ||  || 2000.00
-15/06/2017 || 1000.00 ||  || 1000.00
+15/06/2017 || || 500.00 || 1500.00
+15/06/2017 || 1000.00 || || 2000.00
+15/06/2017 || 1000.00 || || 1000.00
 => [["15/06/2017", "", "500.00", "1500.00"], ["15/06/2017", "1000.00", "", "2000.00"], ["15/06/2017", "1000.00", "", "1000.00"]]
 
 ```
