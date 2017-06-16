@@ -13,12 +13,12 @@ class Account
 
   def deposit(amount, date = DateGenerator.todays_date)
     @balance.money_in(amount)
-    @transactions.log_deposit(amount, date, @balance.current_balance)
+    @transactions.log_deposit(amount, date.gsub("-", "/"), @balance.current_balance)
   end
 
   def withdraw(amount, date = DateGenerator.todays_date)
     @balance.money_out(amount)
-    @transactions.log_withdraw(amount, date, @balance.current_balance)
+    @transactions.log_withdraw(amount, date.gsub("-", "/"), @balance.current_balance)
   end
 
   def print_statement
