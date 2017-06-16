@@ -11,12 +11,12 @@ class Account
     @transactions = TransactionLog.new.transactions
   end
 
-  def deposit(amount, date = DateGenerator.new.todays_date)
+  def deposit(amount, date = DateGenerator.new.date)
     @balance.money_in(amount)
     log_deposit(amount, date)
   end
 
-  def withdraw(amount, date = DateGenerator.new.todays_date)
+  def withdraw(amount, date = DateGenerator.new.date)
     @balance.money_out(amount)
     log_withdraw(amount, date)
   end
