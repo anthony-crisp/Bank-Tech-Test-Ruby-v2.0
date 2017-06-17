@@ -1,8 +1,8 @@
 # Prints statements to console.
-class PrintStatement
+class Print
   attr_reader :transactions
 
-  def self.print_statement(transactions)
+  def self.statement(transactions)
     puts 'date || credit || debit || balance'
     transactions.reverse.each do |transaction|
       puts transaction.join(' || ').gsub!("  ", " ")

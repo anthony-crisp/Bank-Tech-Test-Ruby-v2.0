@@ -1,4 +1,4 @@
-# Passes todays date if none is provided
+# Passes todays date if none is provided.
 require 'date'
 
 class DateGenerator

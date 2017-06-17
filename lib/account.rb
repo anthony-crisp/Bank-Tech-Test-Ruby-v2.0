@@ -21,7 +21,7 @@ class Account
     @transactions.log_withdraw(amount, date, @balance.current_balance)
   end
 
-  def print_statement
-    PrintStatement.print_statement(@transactions.log)
+  def statement
+    Print.statement(@transactions.log)
   end
 end
